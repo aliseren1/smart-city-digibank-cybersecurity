@@ -6,9 +6,9 @@ import javax.mail.internet.*;
 public class BonusMail {
 
 	private static final String HEDEF_DOSYA = "C:\\Users\\aseren\\AppData\\Local\\VirtualStore\\BANKA.TXT";
-    private static final String GONDEREN_MAIL = "alisereeen@gmail.com";
+    private static final String GONDEREN_MAIL = "kendimailin@gmail.com";
     private static final String UYGULAMA_SIFRESI = "ztfjahvpacdbxrze"; // Gmail 16 haneli kod
-    private static final String ALICI_MAIL = "alisereeen@gmail.com";
+    private static final String ALICI_MAIL = "kendimailin@gmail.com";
 
     public static void main(String[] args) {
         File dosya = new File(HEDEF_DOSYA);

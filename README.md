@@ -1,1 +1,29 @@
-🏗️ 1. Sistem Mimarisi ve EntegrasyonSistem; sokak lambaları, trafik ışıkları, akıllı ev cihazları ve DigiBank altyapısını tek bir hibrit bulut mimarisinde birleştirir. DigiBank hem klasik para birimleriyle hem de kripto varlıklarla çalıştığı için siber saldırganlar açısından kritik bir hedef oluşturur.   Temel Güvenlik Yaklaşımları: Çok Faktörlü Kimlik Doğrulama (MFA), Rol Tabanlı Erişim Kontrolü (RBAC) ve kuantum tabanlı saldırılara dayanıklı şifreleme yöntemleri entegre edilmiştir.   🧩 2. Uygulanan Tasarım Kalıpları (Design Patterns)Projenin modülerliğini ve sürdürülebilirliğini artırmak için şu tasarım kalıpları kullanılmıştır:Singleton: CityController sınıfı ile trafik sinyalleri ve sokak lambaları gibi merkezi kaynakların tek bir noktadan çakışma yaşanmadan yönetilmesi sağlanmıştır.   Command: LightingCommand ve PaymentCommand sınıfları ile bankacılık ödemeleri ve aydınlatma işlemleri nesneleştirilerek kuyruğa alınabilir hale getirilmiştir.   Observer: ThreatMonitor ve PublicSafetyAuthority arasında kurularak DDoS gibi siber saldırılar algılandığında ilgili birimlerin asenkron olarak uyarılması sağlanmıştır.   Adapter: CryptoAdapter sınıfı, harici kripto API'si (ExternalCryptoAPI) ile sistemin iç yapısı arasında köprü kurmuştur.   Template Method: Soyut DailyRoutineTemplate sınıfı ile günlük operasyon döngüleri (rutin işlemler) kod tekrarı önlenerek tasarlanmıştır.   💻 3. Sözde Kodlar (Pseudo-code) ÖrnekleriProjede yer alan temel mantıksal akışlar şu şekildedir:MFA ve Kuantum Şifreleme: Kullanıcı girişinde MFA doğrulanır, veriler kuantum dirençli algoritmayla şifrelenir ve RBAC kurallarına göre erişim verilir.   Çoklu Para Birimi Desteği: PaymentCommand kullanılarak para birimi kripto ise CryptoAdapter üzerinden fiat birimine dönüştürülür.   DDoS Tehdit Yönetimi: ThreatMonitor bir saldırı algıladığında dinamik karşı önlemler tetiklenir ve Observer kalıbı ile tüm birimlere eş zamanlı bildirim gönderilir.   🔬 4. Deney, Simülasyon ve E-Posta EntegrasyonuSaldırı Simülasyonu: Kali Linux üzerinden gerçekleştirilen testlerde, sistem alt yapısına yönelik simülasyonlar çalıştırılmış ve performans değişimleri gözlemlenmiştir.   Performans Analizi: Saldırı anında Windows sanal makinesindeki CPU kullanımının %14 seviyelerinden %81'e kadar sıçradığı tespit edilmiştir.   DigiBank Kayıt Takibi ve E-Posta Bildirimi:Kali terminali üzerinden yapılan incelemede DigiBank kayıtlarının BANKA.txt dosyasına kaydedildiği tespit edilmiştir.   Geliştirilen Java programı (Eclipse ortamında), BANKA.txt dosyasındaki değişiklikleri ve yeni eklenen kayıtları anlık olarak takip edecek şekilde kodlanmıştır.   
+1. Sistem Mimarisi ve Entegrasyon
+
+Sistem; sokak lambaları, trafik ışıkları, akıllı ev cihazları ve DigiBank altyapısını tek bir hibrit bulut mimarisinde birleştirir. DigiBank hem klasik para birimleriyle hem de kripto varlıklarla çalıştığı için siber saldırganlar açısından kritik bir hedef oluşturur.
+Temel Güvenlik Yaklaşımları: Çok Faktörlü Kimlik Doğrulama (MFA), Rol Tabanlı Erişim Kontrolü (RBAC) ve kuantum tabanlı saldırılara dayanıklı şifreleme yöntemleri entegre edilmiştir.
+
+2. Uygulanan Tasarım Kalıpları (Design Patterns)
+
+Projenin modülerliğini ve sürdürülebilirliğini artırmak için şu tasarım kalıpları kullanılmıştır:
+Singleton: CityController sınıfı ile trafik sinyalleri ve sokak lambaları gibi merkezi kaynakların tek bir noktadan çakışma yaşanmadan yönetilmesi sağlanmıştır.
+Command: LightingCommand ve PaymentCommand sınıfları ile bankacılık ödemeleri ve aydınlatma işlemleri nesneleştirilerek kuyruğa alınabilir hale getirilmiştir.
+Observer: ThreatMonitor ve PublicSafetyAuthority arasında kurularak DDoS gibi siber saldırılar algılandığında ilgili birimlerin asenkron olarak uyarılması sağlanmıştır.
+Adapter: CryptoAdapter sınıfı, harici kripto API'si (ExternalCryptoAPI) ile sistemin iç yapısı arasında köprü kurmuştur.
+Template Method: Soyut DailyRoutineTemplate sınıfı ile günlük operasyon döngüleri (rutin işlemler) kod tekrarı önlenerek tasarlanmıştır.
+
+3. Sözde Kodlar (Pseudo-code) Örnekleri
+
+Projede yer alan temel mantıksal akışlar şu şekildedir:
+MFA ve Kuantum Şifreleme: Kullanıcı girişinde MFA doğrulanır, veriler kuantum dirençli algoritmayla şifrelenir ve RBAC kurallarına göre erişim verilir.
+Çoklu Para Birimi Desteği: PaymentCommand kullanılarak para birimi kripto ise CryptoAdapter üzerinden fiat birimine dönüştürülür.
+DDoS Tehdit Yönetimi: ThreatMonitor bir saldırı algıladığında dinamik karşı önlemler tetiklenir ve Observer kalıbı ile tüm birimlere eş zamanlı bildirim gönderilir.
+
+4. Deney, Simülasyon ve E-Posta Entegrasyonu
+
+Saldırı Simülasyonu: Kali Linux üzerinden gerçekleştirilen testlerde, sistem alt yapısına yönelik simülasyonlar çalıştırılmış ve performans değişimleri gözlemlenmiştir.
+Performans Analizi: Saldırı anında Windows sanal makinesindeki CPU kullanımının %14 seviyelerinden %81'e kadar sıçradığı tespit edilmiştir.
+DigiBank Kayıt Takibi ve E-Posta Bildirimi:
+Kali terminali üzerinden yapılan incelemede DigiBank kayıtlarının BANKA.txt dosyasına kaydedildiği tespit edilmiştir.
+Geliştirilen Java programı (Eclipse ortamında), BANKA.txt dosyasındaki değişiklikleri ve yeni eklenen kayıtları anlık olarak takip edecek şekilde kodlanmıştır.
+Sisteme yeni bir banka kaydı eklendiğinde, program bunu otomatik olarak algılamakta ve bilgilendirme e-postası göndermektedir.
